@@ -1,12 +1,9 @@
 package com.springsource.xmlparser;
 
 /**
- * Description
- *
- * @author chenlinchao
+ * @author chenxyz
  * @version 1.0
  * @date 2017-09-25
- * Copyright 青海粮食云项目组
  */
 public class Student {
 
