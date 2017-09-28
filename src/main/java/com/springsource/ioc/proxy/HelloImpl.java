@@ -13,6 +13,6 @@ public class HelloImpl implements Hello {
     }
 
     public void sayGoodBye(String name) {
-        System.out.println("say goodbye, " + name + "!");
+        System.out.println("Goodbye, " + name + "!");
     }
 }
