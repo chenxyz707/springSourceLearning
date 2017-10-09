@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+">
+
+    <!-- 自动扫描dao和service包(自动注入) -->
+    <!--<context:component-scan base-package="com.springsource" />-->
+    <bean id="my1" class="com.springsource.xmlparser.My1"/>
+    <bean id="my2" class="com.springsource.xmlparser.My2"/>
+    <bean id="my3" class="com.springsource.xmlparser.My3"/>
+    <bean id="my4" class="com.springsource.xmlparser.My4"/>
+    <bean id="my5" class="com.springsource.xmlparser.My5"/>
+    <bean id="my6" class="com.springsource.xmlparser.My6"/>
+    <!--<bean id="my9" class="com.springsource.xmlparser.My9"/>-->
+    <bean id="jackstudent" class="com.springsource.xmlparser.Student" />
+
+</beans>

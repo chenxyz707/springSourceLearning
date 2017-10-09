@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 2017-09-25
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring.xml")
+@ContextConfiguration(locations = "classpath:xmlparser/spring.xml")
 public class XmlParserTest implements ApplicationContextAware {
 
     public ApplicationContext context;
