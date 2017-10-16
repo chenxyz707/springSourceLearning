@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+">
+
+    <!-- 自动扫描dao和service包(自动注入) -->
+    <!--<context:component-scan base-package="com.springsource" />-->
+    <bean id="propertyModel" class="com.springsource.ioc.setProperty.PropertyModel">
+        <property name="id" value="1234" />
+        <property name="names">
+            <list>
+                <value>chenxyz1</value>
+                <value>chenxyz2</value>
+                <value>chenxyz3</value>
+            </list>
+        </property>
+
+        <!--使用下标 依赖注入的时候 必须定义List或数组大小的大小，否则会报错-->
+        <property name="subjects[0]" value="语文"/>
+        <property name="subjects[1]" value="数学"/>
+        <property name="subjects[2]" value="英语"/>
+
+        <property name="score">
+            <array>
+                <value>92</value>
+                <value>84</value>
+                <value>97</value>
+            </array>
+        </property>
+        <property name="attributes">
+            <map>
+                <entry key="sex" value="female" />
+                <entry key="address" value="beijing" />
+                <entry key="height" value="180" />
+            </map>
+        </property>
+        <property name="student" ref="student"/>
+    </bean>
+
+    <bean id="student" class="com.springsource.xmlparser.Student">
+        <property name="username" value="chenxyz"/>
+        <property name="password" value="123456"/>
+        <property name="school" value="西安高新一中"/>
+    </bean>
+</beans>
